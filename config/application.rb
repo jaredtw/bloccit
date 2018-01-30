@@ -27,5 +27,6 @@ module Bloccit
 
     config.autoload_paths << File.join(config.root, "lib")
     config.generators.system_tests = nil
+    config.action_controller.permit_all_parameters = true
   end
 end

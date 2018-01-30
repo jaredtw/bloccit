@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :questions
 
+  post 'users/confirm' => 'users#confirm'
+
   get 'about' => 'welcome#about'
 
   get 'welcome/contact'
