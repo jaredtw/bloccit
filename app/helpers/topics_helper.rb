@@ -1,5 +1,5 @@
 module TopicsHelper
-  def user_is_authorized_for_editing?
+  def user_is_authorized_for_editing?(topic)
     current_user && (current_user.admin? || current_user.moderator?)
   end
 
