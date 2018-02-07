@@ -8,6 +8,7 @@
 <% end %>
 
 <div class="row">
+<<<<<<< HEAD
     <div class="col-md-8">
         <p class="lead"><%= @topic.description %></p>
         <% @topic.posts.each do |post| %>
@@ -24,6 +25,16 @@
             </div>
         <% end %>
     </div>
+=======
+  <div class="col-md-8">
+    <p class="lead"><%= @topic.description %></p>
+    <% @topic.posts.each do |post| %>
+      <%= render partial: 'votes/voting', locals: { post: post } %>
+      <%= render partial: 'posts/post', locals: { post: post} %>
+    <% end %>
+  </div>
+  <div class="col-md-4">
+>>>>>>> 53e8005dd43e028f6ce41caa9cd3f62e20330780
     <% if current_user %>
         <div class="col-md-4">
             <%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success' %>

@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
    let(:user) { User.create!(name: "Bloccit User", email: "user@bloccit.com", password: "password") }
 
-     it {is_expected.to have_many(:posts) }
+     it { is_expected.to have_many(:posts) }
+     it { is_expected.to have_many(:comments) }
+     it { is_expected.to have_many(:votes) }
 
      it { is_expected.to validate_presence_of(:name) }
      it { is_expected.to validate_length_of(:name).is_at_least(1) }
@@ -68,6 +70,7 @@ RSpec.describe User, type: :model do
          expect(user.admin?).to be_truthy
        end
      end
+<<<<<<< HEAD
 
      context "moderator user" do
        before do
@@ -86,6 +89,8 @@ RSpec.describe User, type: :model do
          expect(user.moderator?).to be_truthy
        end
      end
+=======
+>>>>>>> 53e8005dd43e028f6ce41caa9cd3f62e20330780
    end
 
 
