@@ -21,21 +21,21 @@
 
 
 <h2>Posts</h2>
-<% if @user.posts.any? %>
+<% if user_has_posts? %>
   <%= render @user.posts %>
 <% else %>
   <p><%= @user.name %> has not submitted any posts yet.</p>
 <% end %>
 
 <h2>Comments</h2>
-<% if @user.comments.any? %>
+<% if user_has_comments? %>
   <%= render @user.comments %>
 <% else %>
     <p><%= @user.name %> has not submitted any comments yet.</p>
 <% end %>
 
 <h2>Favorites</h2>
-<% if @user.favorites.any? %>
+<% if user_has_favorites? %>
   <%= render @favorite_posts %>
 <% else %>
   <p><%= @user.name %> has not favorited any posts yet.</p>
