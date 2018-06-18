@@ -22,6 +22,8 @@ class User < ApplicationRecord
   enum role: [:member, :moderator, :admin]
 
   def favorite_for(post)
+    p "*******************************"
+    p post
     favorites.where(post_id: post.id).first
   end
 

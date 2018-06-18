@@ -15,11 +15,15 @@ module UsersHelper
     end
   end
 
-  def user_has_favorites?(user)
-    if user.favorites.any?
-      render(user.favorites)
-    else
-      content_tag(:p, "#{user.name} has not favorited anything yet.")
-    end
-  end
+#  def user_has_favorites?(user)
+#    if user.favorites.any?
+#      p '**********'
+#      p user.favorites
+#      user.favorites.each do |i|
+#        render(post, i)
+#      end
+#    else
+#      content_tag(:p, "#{user.name} has not favorited anything yet.")
+#    end
+#  end
 end
